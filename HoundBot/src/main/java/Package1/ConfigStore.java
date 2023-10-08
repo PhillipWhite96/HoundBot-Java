@@ -9,7 +9,7 @@ public class ConfigStore {
     private String minecraftServerName;
     private String maxMemory;
     private String minMemory;
-    private String apiKey;
+    private String apiToken;
 
 
     public void initialise(){
@@ -27,13 +27,13 @@ public class ConfigStore {
             minecraftServerName = prop.getProperty("Server.Name");
             maxMemory = prop.getProperty("Memory.Max");
             minMemory = prop.getProperty("Memory.Min");
-            apiKey = prop.getProperty("API.KEY");
+            apiToken = prop.getProperty("API.Token");
 
             System.out.println("Server Path : " + minecraftServerPath);
             System.out.println("Server Name : " + minecraftServerName);
             System.out.println("Server Path : " + maxMemory);
             System.out.println("Server Path : " + minMemory);
-            System.out.println("Server Path : " + apiKey);
+            System.out.println("Server Path : " + apiToken);
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -41,8 +41,8 @@ public class ConfigStore {
 
 
     }
-    public String getApiKey() {
-        return apiKey;
+    public String getApiToken() {
+        return apiToken;
     }
 
     public String getServerPath() {
